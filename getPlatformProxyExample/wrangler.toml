@@ -85,9 +85,10 @@ compatibility_date = "2024-04-05"
 
 # Bind another Worker service. Use this binding to call another Worker without network overhead.
 # Docs: https://developers.cloudflare.com/workers/wrangler/configuration/#service-bindings
-[[services]]
-binding = "HELLO_WORKER"
-service = "hello-worker"
+services = [
+  { binding = "HELLO_WORKER", service = "hello-worker" },
+  { binding = "SUM_CONSUMER", service = "sum-consumer" }
+]
 
 # Bind a Vectorize index. Use to store and query vector embeddings for semantic search, classification and other vector search use-cases.
 # Docs: https://developers.cloudflare.com/workers/wrangler/configuration/#vectorize-indexes
