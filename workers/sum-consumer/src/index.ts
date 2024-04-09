@@ -23,8 +23,7 @@ export default {
 		const match = path.match(numsRegex);
 
 		if (!match) {
-			return env.SUM.fetch(request);
-			// return new Response('ERROR: the request path should be comprised of numbers (e.g. /123/4/56)', { status: 500 });
+			return new Response('ERROR: the request path should be comprised of numbers (e.g. /123/4/56)', { status: 500 });
 		}
 
 		const nums = path
@@ -34,7 +33,6 @@ export default {
 			.map((numStr) => +numStr);
 
 		const result = await env.SUM.sum(nums);
-		// debugger;
 		return new Response(`${nums.join(' + ')} = ${result}`);
 	},
 };
