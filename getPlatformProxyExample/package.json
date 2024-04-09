@@ -1,0 +1,21 @@
+{
+  "name": "get-platform-proxy-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "types": "wrangler types --env-interface WranglerEnv wrangler.d.ts",
+    "start": "node --import tsx ./index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240405.0",
+    "tsx": "^4.7.2"
+  },
+  "dependencies": {
+    "wrangler": "^3.0.0"
+  }
+}
