@@ -10,5 +10,9 @@ const sumWorkerResp = await env.SUM_CONSUMER.fetch('http://localhost/1/2/3');
 const sumWorkerRespText = await sumWorkerResp.text();
 console.log(`The text response from the bound sum consumer worker is: "${sumWorkerRespText}"\n`);
 
+if(env.SUM.sum === undefined) {
+    console.log('The sum RPC function is undefined!\n');
+}
+
 console.log('');
 await dispose();
