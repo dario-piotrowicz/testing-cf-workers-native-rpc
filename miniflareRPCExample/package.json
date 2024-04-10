@@ -1,0 +1,19 @@
+{
+  "name": "miniflare-rpc-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node --import tsx ./index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tsx": "^4.7.2"
+  },
+  "dependencies": {
+    "miniflare": "^3.20240404.0"
+  }
+}
